@@ -6,9 +6,11 @@ const delay = (ms: number, slug: any) =>
   });
 
 const BlogPost = async ({ params }: { params: any }) => {
-  const post = await delay(5000, params);
+  const post = await delay(2000, params);
   console.log(post);
   console.log(params, "params on blog");
+
+  throw new Error("Error on blog");
   return (
     <div>
       <h1>BlogPost</h1>
